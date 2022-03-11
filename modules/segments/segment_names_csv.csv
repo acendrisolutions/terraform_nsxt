@@ -1,0 +1,5 @@
+﻿segment_names,segment_ips
+Segment_1,10.201.1.1/24
+Segment_2,10.201.2.2/24
+Segment_3,10.201.3.3/24
+Segment_4,10.201.4.4/24

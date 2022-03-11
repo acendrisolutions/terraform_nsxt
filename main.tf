@@ -52,7 +52,8 @@ resource "nsxt_policy_tier1_gateway" "AVS01-Tier1-Terraform" {
 
 module "Terraform_Segments" {
   source         = "./modules/segments"
-  segment_names  = ["Segment_1","Segment_2","Segment_3"]
+  for_each = {for inst in local.segment_names_list : inst.local_id => inst}
+  segment_names  = each.value.segment_names
   segment_IPs    = ["10.201.1.1/24","10.201.2.1/24","10.201.3.1/24"]
   segment_tenant = var.module_tenant
 
@@ -60,4 +61,10 @@ module "Terraform_Segments" {
     nsxt_policy_tier1_gateway.AVS01-Tier1-Terraform
   ]
 }
- 
+
+locals {
+  segment_names_csv=file("./modules/segments/segment_names_csv.csv")
+  segment_names_list=csvdecode(local.segment_names_csv)
+
+} 
+

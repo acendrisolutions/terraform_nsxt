@@ -14,4 +14,7 @@ variable "module_tenant" {
     type    = string
     default = "AVS01-Terraform"
 }
- 
+
+# variable "segment_names_list" {
+#     type    = string
+# }
