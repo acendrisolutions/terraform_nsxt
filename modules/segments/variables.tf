@@ -1,3 +1,5 @@
+# NSX-T Segment Module - variables
+
 variable "segment_tenant" {
     type    = string
     default = "Unlisted"
