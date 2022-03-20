@@ -11,6 +11,6 @@ variable "segment_names" {
 } 
 
 variable "segment_IPs" {
-    description = "CIDR Blocks example: 10.180.160.1/24"
+    description = "CIDR Blocks example: 10.100.1.1/24"
     type        = list(string)
 }

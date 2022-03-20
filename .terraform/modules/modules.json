@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"Terraform_Segments","Source":"./modules/segments","Dir":"modules/segments"}]}
+{"Modules":[{"Key":"Terraform_Segments","Source":"./modules/segments","Dir":"modules/segments"},{"Key":"Tenant1_Segments","Source":"./modules/tenant1_segments","Dir":"modules/tenant1_segments"},{"Key":"Tenant2_Segments","Source":"./modules/tenant2_segments","Dir":"modules/tenant2_segments"},{"Key":"","Source":"","Dir":"."}]}
