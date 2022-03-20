@@ -18,15 +18,15 @@ provider "nsxt" {
 }
 
 data "nsxt_policy_edge_cluster" "EC" {
-  display_name = "TNT67-CLSTR"
+  display_name = "TNTxx-CLSTR"
 }
 
 data "nsxt_policy_tier0_gateway" "T0" {
-  display_name = "TNT67-T0"
+  display_name = "TNTxx-T0"
 }
 
 data "nsxt_policy_transport_zone" "overlay_tz" {
-  display_name = "TNT67-OVERLAY-TZ"
+  display_name = "TNTxx-OVERLAY-TZ"
 }
 
 #

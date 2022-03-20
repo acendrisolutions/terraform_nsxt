@@ -13,7 +13,7 @@ data "nsxt_policy_tier1_gateway" "tier1_router" {
   }
  
 data "nsxt_policy_transport_zone" "overlay_tz" {
-  display_name = "TNT67-OVERLAY-TZ"
+  display_name = "TNTxx-OVERLAY-TZ"
 }
  
 
