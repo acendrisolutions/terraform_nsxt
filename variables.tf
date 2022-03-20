@@ -10,8 +10,8 @@ variable "nsx_password" {
     default = "owQh1%7V4*l3"
 }
 
-variable "module_tenant" {
+variable "module_tenant1" {
     type    = string
-    default = "AVS01-Terraform"
+    default = "AVS01-Tenant1"
 }
  

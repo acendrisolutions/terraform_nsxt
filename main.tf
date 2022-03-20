@@ -28,11 +28,14 @@ data "nsxt_policy_tier0_gateway" "T0" {
 data "nsxt_policy_transport_zone" "overlay_tz" {
   display_name = "TNT67-OVERLAY-TZ"
 }
- 
 
-resource "nsxt_policy_tier1_gateway" "AVS01-Tier1-Terraform" {
-  description               = "AVS01-Tier1-Terraform provisioned by Brett"
-  display_name              = "AVS01-Tier1-Terraform"
+#
+# 
+# 
+
+resource "nsxt_policy_tier1_gateway" "AVS01-Tier1-Tenant1" {
+  description               = "AVS01-Tier1-Tenant1 provisioned by Brett"
+  display_name              = "AVS01-Tier1-Tenant1"
   nsx_id                    = "predefined_id"
   edge_cluster_path         = data.nsxt_policy_edge_cluster.EC.path
   failover_mode             = "PREEMPTIVE"
@@ -44,8 +47,8 @@ resource "nsxt_policy_tier1_gateway" "AVS01-Tier1-Terraform" {
   pool_allocation           = "ROUTING"
 
   tag {
-    scope = var.module_tenant
-    tag   = "AVS01-Tier1-Terraform"
+    scope = var.module_tenant1
+    tag   = "AVS01-Tier1-Tenant1"
   }
 }
 
@@ -54,10 +57,10 @@ module "Terraform_Segments" {
   source         = "./modules/segments"
   segment_names  = ["Segment_1","Segment_2","Segment_3"]
   segment_IPs    = ["10.201.1.1/24","10.201.2.1/24","10.201.3.1/24"]
-  segment_tenant = var.module_tenant
+  segment_tenant = var.module_tenant1
 
   depends_on = [
-    nsxt_policy_tier1_gateway.AVS01-Tier1-Terraform
+    nsxt_policy_tier1_gateway.AVS01-Tier1-Tenant1
   ]
 }
  
