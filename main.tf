@@ -36,7 +36,7 @@ data "nsxt_policy_transport_zone" "overlay_tz" {
 resource "nsxt_policy_tier1_gateway" "AVS01-Tier1-Tenant1" {
   description               = "AVS01-Tier1-Tenant1 provisioned by Brett"
   display_name              = "AVS01-Tier1-Tenant1"
-  nsx_id                    = "predefined_id"
+  nsx_id                    = "AVS01-Tier1-Tenant1"
   edge_cluster_path         = data.nsxt_policy_edge_cluster.EC.path
   failover_mode             = "PREEMPTIVE"
   default_rule_logging      = "false"
@@ -71,7 +71,7 @@ module "Tenant1_Segments" {
 resource "nsxt_policy_tier1_gateway" "AVS01-Tier1-Tenant2" {
   description               = "AVS01-Tier1-Tenant2 provisioned by Brett"
   display_name              = "AVS01-Tier1-Tenant2"
-  nsx_id                    = "predefined_id"
+  nsx_id                    = "AVS01-Tier1-Tenant2"
   edge_cluster_path         = data.nsxt_policy_edge_cluster.EC.path
   failover_mode             = "PREEMPTIVE"
   default_rule_logging      = "false"

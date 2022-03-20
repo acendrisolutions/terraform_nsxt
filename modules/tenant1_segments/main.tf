@@ -9,7 +9,7 @@ terraform {
 }
 
 data "nsxt_policy_tier1_gateway" "tier1_router" {
-  display_name = "AVS01-Tier1-Terraform"
+  display_name = "AVS01-Tier1-Tenant1"
   }
  
 data "nsxt_policy_transport_zone" "overlay_tz" {

@@ -1,5 +1,5 @@
 variable "nsx_manager" {
-    default = "10.180.248.3"
+    default = "10.x.x.x"
 }
 
 variable "nsx_username" {
@@ -7,7 +7,7 @@ variable "nsx_username" {
 }
 
 variable "nsx_password" {
-    default = "owQh1%7V4*l3"
+    default = "asdfasdfasdf"
 }
 
 variable "module_tenant1" {
