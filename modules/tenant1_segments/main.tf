@@ -23,6 +23,7 @@ resource "nsxt_policy_segment" "segment" {
   description         = "Terraform provisioned Segment"
   connectivity_path   = data.nsxt_policy_tier1_gateway.tier1_router.path
   transport_zone_path = data.nsxt_policy_transport_zone.overlay_tz.path
+  replication_mode = "MTEP"
   subnet {
     cidr = var.segment_IPs[count.index]
     # dhcp_ranges = ["10.197.7.193-10.197.7.200"]
